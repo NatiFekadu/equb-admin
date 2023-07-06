@@ -41,6 +41,7 @@ export const EqubModal = () => {
       setLoading(true);
       const response = await axios.post('/api/equbs',values)
       window.location.assign(`/${response.data.id}`)
+      toast.success("Equb Added Successfully")
     } catch (error) {
       toast.error("Something went wrong");
     } finally {
