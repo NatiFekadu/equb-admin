@@ -1,14 +1,18 @@
-import { Button } from "@/components/ui/button";
-import { UserButton } from "@clerk/nextjs";
+'use client';
 
+import { useEffect } from 'react';
+import { useEqubModal } from '@/hooks/use-equb-modal';
 
-const SetupPage =() => {
-    return (
-    <div className="p-4">
-      <UserButton afterSignOutUrl="/"/>
-  
-    </div>
-    )
-  }
-  
-  export default SetupPage
+const SetupPage = () => {
+  const onOpen = useEqubModal((state) => state.onOpen);
+  const isOpen = useEqubModal((state) => state.isOpen);
+
+  useEffect(()=>{
+    if (!isOpen){
+      onOpen();
+    }
+  },[isOpen,onOpen])
+  return <div className="p-4">Root Page</div>;
+};
+
+export default SetupPage;
