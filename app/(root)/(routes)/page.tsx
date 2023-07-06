@@ -7,12 +7,12 @@ const SetupPage = () => {
   const onOpen = useEqubModal((state) => state.onOpen);
   const isOpen = useEqubModal((state) => state.isOpen);
 
-  useEffect(()=>{
-    if (!isOpen){
+  useEffect(() => {
+    if (!isOpen) {
       onOpen();
     }
-  },[isOpen,onOpen])
-  return <div className="p-4">Root Page</div>;
+  }, [isOpen, onOpen]);
+  return null;
 };
 
 export default SetupPage;

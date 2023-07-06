@@ -40,7 +40,7 @@ export const EqubModal = () => {
     try {
       setLoading(true);
       const response = await axios.post('/api/equbs',values)
-      toast.success("Equb created");
+      window.location.assign(`/${response.data.id}`)
     } catch (error) {
       toast.error("Something went wrong");
     } finally {
