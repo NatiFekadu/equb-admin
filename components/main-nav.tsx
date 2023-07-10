@@ -11,10 +11,16 @@ export function MainNav({
   const params = useParams();
   const routes = [
     {
+      href: `/${params.equbId}`,
+      label: 'Home',
+      active: pathname === `/${params.equbId}`,
+    },
+    {
       href: `/${params.equbId}/settings`,
       label: 'Settings',
       active: pathname === `/${params.equbId}/settings`,
     },
+    
   ];
   return (
     <nav className={cn('flex items-center space-x-4 lg:space-x-6', className)}>

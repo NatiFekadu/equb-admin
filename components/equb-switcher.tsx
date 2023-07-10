@@ -93,8 +93,8 @@ export default function EqubSwitcher({
           </CommandList>
           <CommandSeparator/>
           <CommandList>
-            <CommandGroup>
-                <CommandItem className='cursor: pointer' onSelect={()=>{setOpen(false); equbModal.onOpen()}}>
+            <CommandGroup >
+                <CommandItem className='cursor-pointer'  onSelect={()=>{setOpen(false); equbModal.onOpen()}}>
                   <PlusCircle className='mr-2 h-5 w-5 '/>
                   Create Equb
                 </CommandItem>
